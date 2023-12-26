@@ -1,0 +1,105 @@
+import { RequestData } from "@/apis/type";
+import { MockMethod } from "vite-plugin-mock";
+import { IMenuBar } from "./type";
+
+const mainPageMock: Array<MockMethod>  = [
+    {
+        url:`/dev-api/getMenuBars`,
+        method:'get',
+        response:():RequestData<Array<IMenuBar>> =>{
+            return {
+                code:0,
+                message:'dddd',
+                data:[
+                    {
+                        title:'首页',
+                        id:0,
+                        children:[]
+                    },
+                    {
+                        title:'中心概况',
+                        id:1,
+                        children:[
+                            {
+                                title:'中心简介',
+                                id:'01'
+                            },
+                            {
+                                title:'首席专家',
+                                id:'02'
+                            },
+                            {
+                                title:'团队介绍',
+                                id:'03'
+                            },
+                            {
+                                title:'组织架构',
+                                id:'04'
+                            },
+                        ]
+                    },
+                    {
+                        title:'新闻公告',
+                        id:2,
+                        children:[
+                            {
+                                title:'中心新闻',
+                                id:'21'
+                            },
+                            {
+                                title:'中心公告',
+                                id:'22'
+                            },
+                        ]
+                    },
+                    {
+                        title:'服务功能',
+                        id:3,
+                        children:[
+
+                        ]
+                    },
+                    {
+                        title:'资质认定',
+                        id:4,
+                        children:[]
+                    },
+                    {
+                        title:'开放共享',
+                        id:5,
+                        children:[
+                            {
+                                title:'仪器预约',
+                                id:'51', 
+                            }
+                        ]
+                    },
+                    {
+                        title:'用户指南',
+                        id:6,
+                        children:[
+                            {
+                                title:'院内用户',
+                                id:'61',
+                            },
+                            {
+                                title:'院外用户',
+                                id:'62',
+                            },
+                            {
+                                title:'常用下载',
+                                id:'63',
+                            },
+                        ]
+                    },
+                    {
+                        title:'联系我们',
+                        id:7,
+                        children:[]
+                    }
+                ],
+            }
+        }
+    },
+]
+export default mainPageMock;

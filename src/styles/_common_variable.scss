@@ -1,0 +1,27 @@
+// 公共变量
+$com_base_color:#337ab7;
+
+
+// 主页变量
+// 主页的 header 高度
+$main_page_header_height:128px;
+// 主页的菜单高度
+$main_page_menu_bar_height:60px;
+// 主页的背景图片高度
+$main_page_bg_height:400px;
+// 主页的搜索框宽度占比
+$main_page_search_width:60%;
+// 搜索框距离菜单高度
+$main_page_search_margin_top:100px;
+$main_page_router_margin_top:60px;
+
+
+
+
+// 首页
+
+@mixin mixin_split_line($width:3px, $color:#337ab7, $style:solid) {
+    border:$width $color $style
+}
+
+
